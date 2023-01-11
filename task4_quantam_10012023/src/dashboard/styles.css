@@ -11,6 +11,7 @@
 
 body {
   font-family: 'quicksand';
+  background: #eeeeee;
 }
 
 /* general classes */
@@ -63,7 +64,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   background: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 .card-content {
   display: flex;
@@ -127,15 +128,17 @@ body {
   height: 1px;
   width: 428px;
   background: black;
-  margin: 16px 24px;
+  margin: 0 24px;
 }
 
 /* svgs styles */
 .svgs {
+  display: flex;
   width: 100%;
   justify-content: space-evenly;
+  margin-top: 15px;
 }
-.svgs > img {
+/* .svgs > img {
   width: 18px;
   height: 24px;
-}
+} */
