@@ -1,0 +1,141 @@
+@font-face {
+  font-family: quicksand;
+  src: url('../../Quicksandfont1/static/Quicksand-Medium.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'quicksand';
+}
+
+/* general classes */
+
+.mr-6 {
+  margin-right: 6px;
+}
+.mx-8 {
+  margin: 0 8px;
+}
+
+.vr {
+  width: 1px;
+  height: 12px;
+  background: #000000;
+  margin: 0 8px;
+}
+.fs-12 {
+  font-size: 12px;
+}
+.fs-16 {
+  font-size: 16px;
+}
+
+.fc-gray {
+  color: #666666;
+}
+
+.favorite-size {
+  height: 24px;
+  width: 20px;
+}
+
+.course-title-color {
+  color: #222222;
+}
+.bold {
+  font-weight: bold;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.course-card {
+  width: 476px;
+  height: 246px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid black;
+}
+.card-content {
+  display: flex;
+  /* justify-content: center; */
+  margin: 24px 16px 16px 24px;
+}
+
+.course-img {
+  border-radius: 2px;
+}
+.course-data {
+  width: 100%;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+.course-img {
+  margin-right: 16px;
+}
+
+.subject {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+/* units styles */
+.units {
+  margin-bottom: 16px;
+}
+
+.course-class {
+  width: 100%;
+}
+
+.course-class-list {
+  width: 90%;
+  background: transparent;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+  cursor: pointer;
+  background: url('../../icons/arrow-down.svg') no-repeat;
+  background-position: 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 8px;
+}
+
+/* stats-data styles */
+.stats-data {
+}
+
+/* divider styles */
+.divider-black {
+  height: 1px;
+  width: 428px;
+  background: black;
+  margin: 16px 24px;
+}
+
+/* svgs styles */
+.svgs {
+  width: 100%;
+  justify-content: space-evenly;
+}
+.svgs > img {
+  width: 18px;
+  height: 24px;
+}
