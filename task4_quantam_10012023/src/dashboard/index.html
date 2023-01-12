@@ -5,74 +5,416 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard of courses</title>
-    <link rel="stylesheet" href="styles.css" />
+    
+    <!-- normal css -->
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <!-- scss -->
+    <link rel="stylesheet" href="./sass-styles/styles.css">
+
   </head>
   <body>
-    <div class="course-card">
-      <div class="card-content">
-        <div class="course-img">
-          <img class="" src="../../images/imageMask.png" alt="course-image" />
+    <div class="main-container">
+      <div class="dashboard-container">
+        <div class="nav">
+          <div class="nav-img-logo">
+            <img src="../../icons/logo used in header.svg" alt="" />
+          </div>
+          <div class="nav-list">
+            <ul class="nav-list-ul fs-14">
+              <li class="nav-list-item notfication-items">
+                <a
+                  class="nav-list-item-link fc-green nav-list-item-active-link-active"
+                  href=""
+                >
+                  DASHBOARD
+                </a>
+                <div class="hr-white"></div>
+              </li>
+              <li class="nav-list-item notfication-items">
+                <a class="nav-list-item-link fc-green" href=""> USERS </a>
+              </li>
+              <li class="nav-list-item notfication-items">
+                <a class="nav-list-item-link fc-green" href=""> REPORT </a>
+              </li>
+              <li class="nav-list-item notfication-items">
+                <a class="nav-list-item-link fc-green" href=""> CONTACT </a>
+              </li>
+              <li class="nav-list-item notfication-items">
+                <a class="nav-list-item-link fc-green" href=""> ADMIN </a>
+              </li>
+
+              <div class="nav-alerts nav-list-item ">
+                <!-- <div class="notfication">2</div> -->
+                <img src="../../icons/alerts.svg" alt="" />
+              </div>
+
+              <div class="nav-annoucements nav-list-item ">
+                <!-- <div class="notfication">1</div> -->
+                <img src="../../icons/announcements.svg" alt="" />
+              </div>
+
+              <div class="nav-profile nav-list-item ">
+                <img
+                  src="../../quantum screen assets/icons/account_circle.svg"
+                  alt=""
+                />
+              </div>
+
+              <div class="nav-list-item ham-menu">
+                <img
+                  src="../../quantum screen assets/icons/hamburger-menu.svg"
+                  alt=""
+                />
+              </div>
+
+            </ul>
+          </div>
         </div>
-        <div class="course-data">
-          <div class="title">
-            <p class="fs-16 course-title-color">Acceleration</p>
+
+        <div class="course-class-section fw-mid">
+          <div class="course-section active-black">
+            <img src="" alt="" />
+            <p class="fs-24">4</p>
+            <p fs-16>&nbsp;Courses</p>
+          </div>
+          <div class="class-section fw-mid>
+            <img src="" alt="" />
+            <p class="fs-24">4</p>
+            <p fs-16>&nbsp;Classes</p>
+          </div>
+        </div>
+
+        <div class="course-search">
+          <div class="total-course">
+            <p class="fs-12">Showing 4 of 4 courses</p>
+          </div>
+          <div class="course-sort">
+            <p class="fs-12">Sort by:</p>
+            <select class="sort-list fs-16" name="" id="">
+              <option value="Course Name">Course Name</option>
+              <option value="Course Name">Course Name</option>
+              <option value="Course Name">Course Name</option>
+              <option value="Course Name">Course Name</option>
+            </select>
+            <img class="course-sort-img" src="../../icons/sort.svg" alt="">
+          </div>
+        </div>
+
+
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="card-content">
+              <div class="course-img">
+                <img
+                  class=""
+                  src="../../images/imageMask.png"
+                  alt="course-image"
+                />
+              </div>
+              <div class="course-data">
+                <div class="title fw-mid>
+                  <p class="fs-16 course-title-color">Acceleration</p>
+                  <img
+                    class="favorite-size"
+                    src="../../icons/favourite.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="subject fs-12">
+                  <p class="fc-gray">Subject</p>
+                  <div class="vr"></div>
+                  <p class="fc-gray">Grade 7 + 2</p>
+                </div>
+                <div class="d-flex course-details fs-12">
+                  <div class="d-flex units">
+                    <p class="bold mr-6">4</p>
+                    <p>Units</p>
+                  </div>
+                  <div class="d-flex lessons mx-8">
+                    <p class="bold mr-6">18</p>
+                    <p>Lessons</p>
+                  </div>
+                  <div class="d-flex topics">
+                    <p class="bold mr-6">24</p>
+                    <p>Topics</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="course-class">
+                    <select class="course-class-list fs-16" name="" id="">
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex stats-data fs-12">
+                  <p class="fc-gray">50 Students</p>
+                  <div class="vr"></div>
+                  <p class="fc-gray">21-Jan-2020 - 21-Aug-2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="divider-black"></div>
+            <div class="svgs">
+              <img src="../../icons/preview.svg" alt="" />
+              <img src="../../icons/manage course.svg" alt="" />
+              <img src="../../icons/grade submissions.svg" alt="" />
+              <img src="../../icons/reports.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="card-content">
+              <div class="course-img">
+                <img
+                  class=""
+                  src="../../images/imageMask-2.png"
+                  alt="course-image"
+                />
+              </div>
+              <div class="course-data">
+                <div class="title fw-mid">
+                  <p class="fs-16 course-title-color">Acceleration</p>
+                  <img
+                    class="course-img favorite-size"
+                    src="../../icons/favourite.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="subject fs-12">
+                  <p class="fc-gray">Subject</p>
+                  <div class="vr"></div>
+                  <p class="fc-gray">Grade 7 + 2</p>
+                </div>
+                <div class="d-flex course-details fs-12">
+                  <div class="d-flex units">
+                    <p class="bold mr-6">4</p>
+                    <p>Units</p>
+                  </div>
+                  <div class="d-flex lessons mx-8">
+                    <p class="bold mr-6">18</p>
+                    <p>Lessons</p>
+                  </div>
+                  <div class="d-flex topics">
+                    <p class="bold mr-6">24</p>
+                    <p>Topics</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="course-class">
+                    <select class="course-class-list fs-16" name="" id="">
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex stats-data fs-12">
+                  <p class="fc-gray">50 Students</p>
+                  <div class="vr"></div>
+                  <p class="fc-gray">21-Jan-2020 - 21-Aug-2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="divider-black"></div>
+            <div class="svgs">
+              <img src="../../icons/preview.svg" alt="" />
+              <img src="../../icons/manage course.svg" alt="" />
+              <img src="../../icons/grade submissions.svg" alt="" />
+              <img src="../../icons/reports.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="course-card">
+            <div class="card-content">
+              <div class="course-img">
+                <img
+                  class=""
+                  src="../../images/imageMask-3.png"
+                  alt="course-image"
+                />
+              </div>
+              <div class="course-data">
+                <div class="title fw-mid">
+                  <p class="fs-16 course-title-color">Acceleration</p>
+                  <img
+                    class="course-img favorite-size"
+                    src="../../icons/favourite.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="subject fs-12">
+                  <p class="fc-gray">Subject</p>
+                  <div class="vr"></div>
+                  <p class="fc-gray">Grade 7 + 2</p>
+                </div>
+                <div class="d-flex course-details fs-12">
+                  <div class="d-flex units">
+                    <p class="bold mr-6">4</p>
+                    <p>Units</p>
+                  </div>
+                  <div class="d-flex lessons mx-8">
+                    <p class="bold mr-6">18</p>
+                    <p>Lessons</p>
+                  </div>
+                  <div class="d-flex topics">
+                    <p class="bold mr-6">24</p>
+                    <p>Topics</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="course-class">
+                    <select class="course-class-list fs-16" name="" id="">
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex stats-data fs-12">
+                  <p class="fc-gray">50 Students</p>
+                  <div class="vr"></div>
+                  <p class="fc-gray">21-Jan-2020 - 21-Aug-2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="divider-black"></div>
+            <div class="svgs">
+              <img src="../../icons/preview.svg" alt="" />
+              <img src="../../icons/manage course.svg" alt="" />
+              <img src="../../icons/grade submissions.svg" alt="" />
+              <img src="../../icons/reports.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="course-card course-expired">
+            <div class="course-tag fs-8">
+              <p class="course-tag-data">EXPIRED</p>
+            </div>
+            <div class="card-content">
+              
+              <div class="course-img">
+                <img
+                  class=""
+                  src="../../images/imageMask-1.png"
+                  alt="course-image"
+                />
+              </div>
+              <div class="course-data ">
+                <div class="title fw-mid">
+                  <p class="fs-16 course-title-color">Acceleration</p>
+                  <img
+                    class="course-img favorite-size"
+                    src="../../icons/favourite.svg"
+                    alt=""
+                  />
+                </div>
+                <div class="subject fs-12">
+                  <p class="fc-gray">Subject</p>
+                  <div class="vr"></div>
+                  <p class="fc-gray">Grade 7 + 2</p>
+                </div>
+                <div class="d-flex course-details fs-12">
+                  <div class="d-flex units">
+                    <p class="bold mr-6">4</p>
+                    <p>Units</p>
+                  </div>
+                  <div class="d-flex lessons mx-8">
+                    <p class="bold mr-6">18</p>
+                    <p>Lessons</p>
+                  </div>
+                  <div class="d-flex topics">
+                    <p class="bold mr-6">24</p>
+                    <p>Topics</p>
+                  </div>
+                </div>
+                <div>
+                  <div class="course-class">
+                    <select class="course-class-list fs-16" name="" id="">
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                      <option value="Mr. Frank's Class B ">
+                        Mr. Frank's Class B
+                      </option>
+                    </select>
+                  </div>
+                </div>
+                <div class="d-flex stats-data fs-12">
+                  <p class="fc-gray">50 Students</p>
+                  <div class="vr"></div>
+                  <p class="fc-gray">21-Jan-2020 - 21-Aug-2020</p>
+                </div>
+              </div>
+            </div>
+            <div class="divider-black"></div>
+            <div class="svgs">
+              <img src="../../icons/preview.svg" alt="" />
+              <img src="../../icons/manage course.svg" alt="" />
+              <img src="../../icons/grade submissions.svg" alt="" />
+              <img src="../../icons/reports.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+
+        <div class="about">
+          <p class="fc-green fc-14">About</p>
+          <div class="hr"></div>
+          <p class="fc-green fc-14">Contact Us</p>
+        </div>
+  
+        <div class="footer">
+          <div class="footer-img">
             <img
-              class="course-img favorite-size"
-              src="../../icons/favourite.svg"
+              src="../../icons/logo used in footer.svg"
               alt=""
+              class="footer-logo"
             />
           </div>
-          <div class="subject fs-12">
-            <p class="fc-gray">Subject</p>
-            <div class="vr"></div>
-            <p class="fc-gray">Grade 7 + 2</p>
-          </div>
-          <div class="d-flex course-details fs-12">
-            <div class="d-flex units">
-              <p class="bold mr-6">4</p>
-              <p>Units</p>
-            </div>
-            <div class="d-flex lessons mx-8">
-              <p class="bold mr-6">18</p>
-              <p>Lessons</p>
-            </div>
-            <div class="d-flex topics">
-              <p class="bold mr-6">24</p>
-              <p>Topics</p>
-            </div>
-          </div>
-          <div>
-            <div class="course-class">
-              <select class="course-class-list fs-16" name="" id="">
-                <option value="Mr. Frank's Class B ">
-                  Mr. Frank's Class B
-                </option>
-                <option value="Mr. Frank's Class B ">
-                  Mr. Frank's Class B
-                </option>
-                <option value="Mr. Frank's Class B ">
-                  Mr. Frank's Class B
-                </option>
-                <option value="Mr. Frank's Class B ">
-                  Mr. Frank's Class B
-                </option>
-              </select>
-            </div>
-          </div>
-          <div class="d-flex stats-data fs-12">
-            <p class="fc-gray">50 Students</p>
-            <div class="vr"></div>
-            <p class="fc-gray">21-Jan-2020 - 21-Aug-2020</p>
+          <div class="hr-gray"></div>
+          <div class="footer-text">
+            <p class="fs-12 copy-text">Copyright © 2020-2021</p>
+            <p class="fs-12 medium zeus-text">Zeus Systems Pvt. Ltd.</p>
+            <p class="fs-12">All rights reserved.</p>
           </div>
         </div>
+
+        </div>
       </div>
-      <div class="divider-black"></div>
-      <div class="svgs">
-        <img src="../../icons/preview.svg" alt="" />
-        <img src="../../icons/manage course.svg" alt="" />
-        <img src="../../icons/grade submissions.svg" alt="" />
-        <img src="../../icons/reports.svg" alt="" />
-      </div>
-    </div>
   </body>
 </html>
