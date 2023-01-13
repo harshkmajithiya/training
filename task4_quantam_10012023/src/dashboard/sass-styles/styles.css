@@ -409,8 +409,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* background: url('../../header\ pattern\ image.png'); */
-  background: black;
+  background: url("../../../header pattern image.png");
   margin-bottom: 24px;
 }
 
