@@ -1,5 +1,5 @@
 @import './variables';
-
+@import '../../login/sass-css/styles';
 @font-face {
   font-family: quicksand;
   src: url('../../../Quicksandfont1/static/Quicksand-Medium.ttf');
@@ -10,6 +10,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: $direction;
+}
+
+@mixin d_flex_custom($direction, $jc, $ai) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
 }
 
 * {
@@ -35,7 +42,7 @@ body {
 .vr {
   width: 1px;
   height: 12px;
-  background: #000000;
+  background: black;
   margin: 0 8px;
 }
 
@@ -77,8 +84,7 @@ body {
 }
 
 .notfication {
-  display: flex;
-  justify-content: center;
+  @include d_flex_custom(row, center, none);
   color: white;
   background: $blue;
   width: 17px;
@@ -114,22 +120,17 @@ a {
 .dashboard-container {
   height: 853px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  @include d_flex_custom(column, none, center);
 }
 
 /* navigation styles */
 .nav {
   width: 100%;
   height: 56px;
+  @include d_flex_custom(row, space-between, center);
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  /* background: url('../../header\ pattern\ image.png'); */
-  background: black;
+  background: url('../../../header\ pattern\ image.png');
+  // background: black;
   margin-bottom: 24px;
 }
 
@@ -143,9 +144,7 @@ a {
 
 .nav-list-ul {
   list-style: none;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  @include d_flex_custom(row, space-around, center);
 }
 
 .nav-list-item {
@@ -172,17 +171,13 @@ a {
   background: $greenLighterOff;
   width: 976px;
   height: 64px;
-
-  display: flex;
-  justify-content: center;
+  @include d_flex_custom(row, center, none);
   margin-bottom: 30px;
 }
 
 .class-section {
   width: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centerXY(row);
 }
 .course-section {
   width: 50%;
@@ -191,16 +186,8 @@ a {
 
 /* search-sort styles */
 .sort-list {
+  @extend .state-list;
   width: 165px;
-  background: transparent;
-  border: none;
-  outline: none;
-  margin-top: 5px;
-  cursor: pointer;
-  background: url('../../../icons/arrow-down.svg') no-repeat;
-  background-position: 100%;
-  -moz-appearance: none;
-  -webkit-appearance: none;
   border-bottom: 1px solid $grayLighter;
   margin-bottom: 8px;
   margin-left: 4px;
@@ -209,9 +196,7 @@ a {
 .course-search {
   width: 976px;
   height: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include d_flex_custom(row, space-between, center);
   margin-bottom: 17px;
   padding: 16px 0;
   border-bottom: 1px solid $grayLighter;
@@ -222,9 +207,7 @@ a {
 }
 .course-sort {
   width: 50%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  @include d_flex_custom(row, flex-end, center);
 }
 
 .course-sort-img {
@@ -238,23 +221,22 @@ a {
   gap: 24px;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 40px;
+  // overflow-y: scroll;
 }
-
+.courses-grid::-webkit-scrollbar {
+  display: none;
+}
 /* course-card styles */
 
 .course-card {
   width: 476px;
   height: 246px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  @include d_flex_custom(column, center, flex-start);
   background: white;
   /* border: 1px solid black; */
 }
 .card-content {
   display: flex;
-  /* justify-content: center; */
   margin: 24px 16px 16px 24px;
 }
 
@@ -267,8 +249,8 @@ a {
 
 .title {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
+  @include d_flex_custom(row, none, center);
   margin-bottom: 7px;
 }
 .course-img {
@@ -290,9 +272,7 @@ a {
 }
 
 .subject {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  @include d_flex_custom(row, flex-start, center);
   margin-bottom: 7px;
 }
 
@@ -308,16 +288,7 @@ a {
 }
 
 .course-class-list {
-  width: 90%;
-  background: transparent;
-  border: none;
-  outline: none;
-  margin-top: 5px;
-  cursor: pointer;
-  background: url('../../../icons/arrow-down.svg') no-repeat;
-  background-position: 100%;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+  @extend .state-list;
   border-bottom: 2px solid $grayLighter;
   margin-bottom: 8px;
 }
@@ -336,75 +307,64 @@ a {
 
 /* svgs styles */
 .svgs {
-  display: flex;
   width: 100%;
-  justify-content: space-around;
+  @include d_flex_custom(row, space-around, none);
   margin-top: 15px;
   margin-bottom: 5px;
 }
-/* .svgs > img {
-  width: 18px;
-  height: 24px;
-} */
 
 /* about section */
 .about {
   @include centerXY(row);
+  margin-top: 0px;
   margin-bottom: 16px;
 }
 
 .hr {
-  height: 18px;
-  width: 1px;
-  background: $grayShade;
-  margin: 0 10px;
+  @extend .hr;
 }
 
 /* footer styles */
 
 .footer {
-  background: $grayShade;
-  width: 100%;
-  height: 40px;
-  @include centerXY(row);
+  @extend .footer;
 }
 
 .footer-img {
-  padding: 8px 0;
+  @extend .footer-img;
 }
 
 .hr-gray {
-  height: 24px;
-  width: 1px;
-  background: $grayShade;
-  margin: 0 16px;
+  @extend .hr-gray;
 }
 
 .footer-text {
-  display: flex;
-  justify-content: space-between;
-  margin: auto 0;
+  @extend .footer-text;
 }
 
 .copy-text {
-  margin: 0 8px 0 0;
+  @extend .copy-text;
 }
 .zeus-text {
-  margin: 0 11px 0 0;
+  @extend .zeus-text;
 }
 
 @media screen and (min-width: 1024px) {
+  .nav {
+    width: 1024px;
+  }
   .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(auto-fill, 1fr);
   }
 }
 
 @media screen and (max-width: 1023px) {
+  .nav {
+    width: 100%;
+  }
   .courses-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include d_flex_custom(column, none, center);
     width: 75%;
   }
 
