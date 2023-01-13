@@ -90,6 +90,9 @@ body {
   width: 17px;
   height: 17px;
   border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: 12px;
 }
 
 .course-title-color {
@@ -129,8 +132,8 @@ a {
   height: 56px;
   @include d_flex_custom(row, space-between, center);
 
-  background: url('../../../header\ pattern\ image.png');
-  // background: black;
+  // background: url('../../../header\ pattern\ image.png');
+  background: black;
   margin-bottom: 24px;
 }
 
@@ -149,6 +152,7 @@ a {
 
 .nav-list-item {
   margin: 0 16px;
+  position: relative;
 }
 
 /* .hr-white {
@@ -294,8 +298,8 @@ a {
 }
 
 /* stats-data styles */
-.stats-data {
-}
+// .stats-data {
+// }
 
 /* divider styles */
 .divider-black {

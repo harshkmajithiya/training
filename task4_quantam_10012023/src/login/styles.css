@@ -76,15 +76,14 @@ body {
 
 /* form css */
 .form {
-  height: 550px;
-  width: 488px;
-  background: white;
-  margin: 50px 0;
-  border-top: 4px solid #31b9e4;
-
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 488px;
+  height: 550px;
+  background: white;
+  margin: 50px 0;
+  border-top: 4px solid #31b9e4;
 }
 
 .form-header {

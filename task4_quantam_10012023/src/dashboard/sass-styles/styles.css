@@ -361,6 +361,9 @@ body {
   width: 17px;
   height: 17px;
   border-radius: 50%;
+  position: absolute;
+  top: -6px;
+  left: 12px;
 }
 
 .course-title-color {
@@ -409,7 +412,7 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: url("../../../header pattern image.png");
+  background: black;
   margin-bottom: 24px;
 }
 
@@ -431,6 +434,7 @@ a {
 
 .nav-list-item {
   margin: 0 16px;
+  position: relative;
 }
 
 /* .hr-white {
